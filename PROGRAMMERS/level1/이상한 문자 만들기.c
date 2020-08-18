@@ -21,7 +21,7 @@ char*   solution(const char* s)
         j = 0;
         while ((answer[i + j] != " ") && (answer[i + j] != 0))
         {
-            if (j % 2 == 0)
+            if (j == 0 || j % 2 == 0)
             {
                 if (answer[i + j] >= 'a' && answer[i + j] <= 'z')
                     answer[i + j] -= 32;
@@ -33,7 +33,7 @@ char*   solution(const char* s)
             }
             j++;
         }
-        i = j;
+        i += j;
         if (answer[i] != 0)
         {
             while (answer[i] = " ")
