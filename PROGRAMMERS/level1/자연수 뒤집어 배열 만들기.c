@@ -4,18 +4,20 @@
 
 int*    solution(long long n)
 {
-    long long   len;
+    long long   len = 0;
+    long long   temp;
     int*        answer;
-       
-    while (n)
+      
+    temp = n;
+    while (temp)
     {
         len++;
-        n /= 10;
+        temp /= 10;
     }
-    answer = (int*)malloc(sizeof(int) * len + 1);
+    answer = (int*)malloc(sizeof(int) * len);
     for (int i = 0; i < len; i++)
     {
-        answer[i] = n % 10 + '0';
+        answer[i] = (int)(n % 10);
         n /= 10;
     }
     return answer;

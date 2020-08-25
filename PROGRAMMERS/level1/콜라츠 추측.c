@@ -9,6 +9,7 @@ int     solution(int num)
     for (i = 0; n != 1; i++)
     {
         n = n % 2 == 0 ? n / 2 : (n * 3) + 1;
+        printf("%d\n", n);
         if (i >= 500)
             return -1;
     }

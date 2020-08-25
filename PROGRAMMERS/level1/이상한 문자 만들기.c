@@ -14,7 +14,7 @@ char*   solution(const char* s)
     while (answer[i] != 0)
     {
         j = 0;
-        while ((answer[i + j] != " ") && (answer[i + j] != 0))
+        while ((answer[i + j] != ' ') && (answer[i + j] != 0))
         {
             if (j % 2 == 0)
             {
@@ -29,7 +29,10 @@ char*   solution(const char* s)
             j++;
         }
         i += j;
-        i++;
+        if (answer[i] != 0)
+        {
+            i++;   
+        }
     }
     answer[i] = 0;
     return answer;
