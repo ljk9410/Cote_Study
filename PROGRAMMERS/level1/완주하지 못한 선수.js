@@ -1,6 +1,6 @@
 function solution1(participant, completion) {  
     const completionObj = completion.reduce((obj, curr) => {
-        obj[curr] = obj[curr] ? (obj[curr] + 1) : 1;
+        obj[curr] = obj[curr] ? (obj[curr] + 1) : 1; //obj[curr] = 1 과는 무엇이 다른지?
         return obj;
     }, {});
     console.log(completionObj);
