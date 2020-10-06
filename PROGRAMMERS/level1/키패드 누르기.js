@@ -19,19 +19,6 @@ function solution(numbers, hand) {
             return "R"
         }
 
-        //첫 포지션일 때 2, 5, 8, 0
-        if ((positionL === "*" && positionR === "#") 
-        && (n === 2 || n === 5 || n === 8 || n === 0)) {
-            if (hand === "right") {
-                positionR = n;
-                return "R";
-            }
-            else {
-                positionL = n;
-                return "L";
-            }
-        }
-  
         //2, 5, 8, 0
         let distanceL = 0;
         let distanceR = 0;
