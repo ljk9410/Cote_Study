@@ -2,17 +2,19 @@
 
 int     main()
 {
-    int         C, n, sum = 0, count = 0;;
+    int         C, n, sum, count;
     int         score[1000];
     double      avg = 0;
     
     scanf("%d", &C);
     for (int i = 0; i < C; i++)
     {
+        sum = 0;
+        count = 0;
         scanf("%d", &n);
-        for (int j = 0; j < 1000; j++)
+        for (int j = 0; j < n; j++)
         {
-            scanf("%d", score);
+            scanf("%d", &score[j]);
             sum += score[j];
         }
         avg = (double) sum / n;
@@ -23,6 +25,5 @@ int     main()
         }
         printf("%.3lf%%\n", ((double) count * 100) / n);
     }
-
     return (0);
 }
